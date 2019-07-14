@@ -8,6 +8,8 @@
 
 body {
   padding-top: 100px;
+	font-family: "source-sans-pro", Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-size: 13px;
 }
 
 .carousel-item {
@@ -159,6 +161,11 @@ body {
 	overflow: hidden;
 	 max-width:100%;
 	max-height:100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 
