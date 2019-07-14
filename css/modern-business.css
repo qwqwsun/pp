@@ -256,7 +256,15 @@ p {
 }
 
 @media screen and (max-width:600px) {
-  .pe{
+  .pe, .be img{
     width: 100%;
   }
+}
+
+.be img{
+  overflow: hidden;
+  margin: 0;
+  width: calc(100%/3);
+  height: auto;
+  display: inline-block;
 }
