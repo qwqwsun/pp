@@ -254,6 +254,9 @@ p {
   align="left";
   text-align: left;
 }
+.navbar-toggler-icon {
+    background-color: #FFFFFF;
+}
 
 @media screen and (max-width:600px) {
   .pe, .be img{
