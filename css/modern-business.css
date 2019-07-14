@@ -6,14 +6,41 @@
 
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic);
 
-body {
-  padding-top: 100px;
-	font-family: "source-sans-pro", Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-	font-size: 11px;
+@font-face {
+    font-family: 'archivo_mediumregular';
+    src: url('archivo-medium-webfont.woff2') format('woff2'),
+         url('archivo-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
-h1 {
-	font-family: "Archivo", sans-serif;
+@font-face {
+  font-family: 'Karla';
+  src: url(fonts/Karla/Karla-Bold.ttf);
+  font-weight: 600;
+  font-style: normal;
+}
+
+@@font-face {
+  font-family: 'Source Sans Pro';
+  src: url(https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap);
+  font-weight: 100;
+  font-style: normal;
+}
+
+body {
+  padding-top: 100px;
+font-family: 'Archivo';
+	font-size: 13px;
+}
+
+h1, h2 {
+	font-family: 'Karla', sans-serif;
+}
+
+p {
+  font-family: 'Archivo', sans-serif;
 }
 
 .carousel-item {
@@ -172,7 +199,64 @@ h1 {
 .list {
 	line-height: 25px
 }
-.navbar-toggler.navbar-toggler-right .navbar-toggler-icon {
-    opacity: 1;
-    text-shadow: 0px 0px #000000;
+
+
+.team-section{
+  background: #f1f1f1;
+  text-align: left;
+}
+.inner-width{
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px;
+  color: #333;
+  overflow: hidden;
+}
+.team-section h1{
+  font-family: "Karla";
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  display: inline-block;
+  border-bottom: 4px solid;
+  padding-bottom: 10px;
+}
+.pe{
+  overflow: hidden;
+  padding: 40px 0;
+  margin: 0;
+  transition: 0.4s;
+}
+.pe:hover{
+  background:;
+}
+.pe img{
+  width: 250px;
+  height: auto;
+  padding: 5px;
+  float: left;
+  margin: 0px 15px 15px 0px;
+}
+.p-name{
+  margin-top: 3px;
+  text-transform: uppercase;
+  font-family: 'archivo';
+  font-size: 20px;
+  text-align: left;
+
+}
+.p-des{
+  color:grey;
+  padding-bottom: 16px;
+}
+
+.p-text{
+  align="left";
+  text-align: left;
+}
+
+@media screen and (max-width:600px) {
+  .pe{
+    width: 100%;
+  }
 }
