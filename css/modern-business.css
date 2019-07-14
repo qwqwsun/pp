@@ -12,6 +12,10 @@ body {
 	font-size: 13px;
 }
 
+h1 {
+	font-family: "Archivo", sans-serif;
+}
+
 .carousel-item {
   height: 65vh;
   min-height: 300px;
@@ -53,6 +57,7 @@ body {
 	margin-top: 0;
 }
 
+
 .navbar {
 	background:white !important;
 }
@@ -60,12 +65,13 @@ body {
     opacity: 1;
 }
 .nav-link {
-    color:#141FE4 !important;
+    color:#000000 !important;
 }
+
 .navbar-toggler-icon {
     color: #000000;
     text-shadow: 0px 0px #000000;
-    background-color: #141FE4;
+    background-color: white;
 }
 
 .centered{
@@ -158,11 +164,15 @@ body {
 }
 
 .img-responsive {
-  max-width: 90%;
+  max-width: 65%;
 	float: right;
   height: auto;
 }
 
-
-
-
+.list {
+	line-height: 25px
+}
+.navbar-toggler.navbar-toggler-right .navbar-toggler-icon {
+    opacity: 1;
+    text-shadow: 0px 0px #000000;
+}
