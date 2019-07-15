@@ -32,11 +32,20 @@
 body {
   padding-top: 100px;
 font-family: 'Archivo';
-	font-size: 13px;
+	font-size: 14px;
 }
 
 h1, h2 {
 	font-family: 'Karla', sans-serif;
+    text-align: center;
+    font-size: 36px;
+}
+
+h3, h4 {
+    font-family: 'Karla', sans-serif;
+    text-align: center;
+    font-size: 28px;
+    padding: 5px 0 15px;
 }
 
 p {
@@ -67,7 +76,7 @@ p {
     text-transform: uppercase;
     font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     text-align: center;
 }
 .container p {
@@ -95,10 +104,8 @@ p {
     color:#000000 !important;
 }
 
-.navbar-toggler-icon {
-    color: #000000;
-    text-shadow: 0px 0px #000000;
-    background-color: white;
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;..");
 }
 
 .centered{
@@ -241,13 +248,24 @@ p {
   margin-top: 3px;
   text-transform: uppercase;
   font-family: 'archivo';
-  font-size: 20px;
+    font-weight: 600;
+  font-size: 30px;
   text-align: left;
 
 }
+
+.p-name a {
+    color:0080ff;
+}
+
+.p-name a:hover {
+    text-decoration: underline;
+}
 .p-des{
+text-transform: uppercase;
   color:grey;
-  padding-bottom: 16px;
+  padding-bottom: 10px;
+margin-left: 10px
 }
 
 .p-text{
@@ -266,8 +284,40 @@ p {
 
 .be img{
   overflow: hidden;
-  margin: 0;
-  width: calc(100%/3);
+  margin-bottom: 50px;
+  width: calc(100%/2);
   height: auto;
-  display: inline-block;
+    vertical-align:top;
+    float: left;
 }
+
+#par {
+    font-size: 15px;
+}
+
+.p-name a {
+  text-decoration:underline;
+  text-transform: uppercase;
+  -webkit-transition: .2s;
+}
+.p-name a:hover {
+  color: #151ecb;
+}
+@media (-webkit-min-device-pixel-ratio:0) {
+.p-name a {
+    background-color: #000;
+    background-image: -webkit-linear-gradient(left, #64bbff 0%, #151ecb 50%, transparent 50%);
+    background-position: 100% 0;
+    background-size: 200% 200%;
+    color: transparent;
+    -webkit-transition: .1s .3s;
+    -webkit-background-clip: text;
+  }
+.p-name a:hover {
+    background-position: 0 0;
+    color: transparent;
+    transition: .4s 0;
+  }
+}
+
+
