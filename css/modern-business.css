@@ -95,6 +95,13 @@ font-family: 'Archivo';
 	transform: translateX(0px);
 }
 
+@media screen and (max-width: 800px) {
+  .cl-effect-1 a {
+    display:block;
+      text-align: center;
+  }
+}
+
 .enspad {
     margin-bottom: 30px;
     text-align: center;
@@ -252,11 +259,82 @@ ul li {
   background-image: url("data:image/svg+xml;..");
 }
 
-.centered{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+* {
+  box-sizing: border-box;
 }
+
+@keyframes top {
+  from {
+    transform: translate(0rem, 0);
+  }
+  to {
+    transform: translate(0rem, 3.5rem);
+  }
+}
+@keyframes bottom {
+  from {
+    transform: translate(-11.5rem, 0);
+  }
+  to {
+    transform: translate(0rem, 0);
+  }
+}
+.btn {
+    font-family: 'Karla', sans-serif;
+    font-weight: 600;
+  position: relative;
+align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin: 0 30%;
+  padding: 1rem 2.5rem;
+  background: transparent;
+  outline: none;
+  font-size: 30px;
+  color: #111;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.15s;
+}
+.btn::after, .btn::before {
+  content: "";
+  position: absolute;
+  height: 55%;
+  width: 15%;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: -2;
+  border-radius: 60%;
+}
+.btn::before {
+  background-color: #0073e6;
+  top: -0.75rem;
+  left: 0.5rem;
+  animation: top 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s infinite alternate;
+}
+.btn::after {
+  background-color: #4da6ff;
+  top: 3rem;
+  left: 13rem;
+  animation: bottom 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s infinite alternate;
+}
+.btn:hover {
+  color: white;
+}
+.btn:hover::before, .btn:hover::after {
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+  animation: none;
+}
+.btn:hover::after {
+  left: 0rem;
+}
+.btn:hover::before {
+  top: 0.5rem;
+  left: 0.35rem;
+}
+
+
 
 .equal {
   display: flex;
@@ -284,7 +362,7 @@ ul li {
   display: flex;
   align-items: center;
   justify-content: center;
-	overflow: hidden
+	overflow: hidden;
 }
 
 .equal {
@@ -295,8 +373,9 @@ ul li {
 
 .container {
   padding:10px;
-overflow: scroll;
 }
+
+
 
 .img-responsive {
   max-width: 65%;
@@ -410,8 +489,8 @@ margin-left: 10px
     width: 100%;
     display: block;
       align: middle;
-      margin-top: 1px;
-      margin-bottom: 1px;
+      margin-top: 0px;
+      margin-bottom: 0px;
   }
 }
 
@@ -455,7 +534,7 @@ margin-left: 10px
 @media (max-width:800px) {
      .spon {
         
-        img {display:block;margin:0 auto;max-width: 100%}
+        img {display:block;margin:0 auto;max-width: 800px; overflow: hidden;}
          
         
     }
