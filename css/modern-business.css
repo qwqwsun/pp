@@ -41,6 +41,21 @@ font-family: 'Archivo', sans-serif !important;
   }
 }
 
+.grey {
+    background-color: #f1f1f1;
+    z-index: -10000;
+}
+
+a {
+    color: #0080ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #005ab3;
+}
+
 
 .static {
   position:absolute;
@@ -169,6 +184,103 @@ font-family: 'Archivo', sans-serif !important;
     font-family: 'Karla', sans-serif !important;
 }
 
+/*Add some spacing*/
+.faq-section{
+    margin: 15px 0;
+        position: relative;
+}
+
+/*Hide the paragraphs*/
+.faq-section p{
+    display: none;
+    font-family: 'Archivo', sans-serif;
+}   
+
+/*Hide the checkboxes */
+.faq-section input{
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0;         
+    display: none\9; /* IE8 and below */
+    margin: 0;          
+    width: 100%;
+    height: 36px;
+}
+
+
+/*If the checkbox is checked, show all paragraphs*/
+.faq-section input[type=checkbox]:checked~p{
+    display: block;
+    color: #444;
+    font-size: 1em;
+    /* restore clipping defaults */
+    text-overflow: clip; 
+    white-space: normal;
+    overflow: visible;  
+}
+
+/*Style the label*/
+.faq-section label{
+    font-size: 1.2em;
+    background-color: #ddd;
+    display: block;
+    position: relative;
+        height: auto;
+    padding: 4px 10px;
+    font-weight: bold;
+    border: px solid #000;
+    border-radius: px;
+    border-left: px solid #888;
+    transition: all .15s ease-out;          
+}
+
+/*Remove text selection when toggle-ing*/
+.faq-section label::selection{
+    background: none;
+}
+
+.faq-section label:hover{
+    background: #f5f5f5;
+}
+
+/*If the checkbox is checked, style the label accordingly*/
+.faq-section input[type=checkbox]:checked~label{
+    border-color: inherit;          
+    background: #cde6ff;
+    box-shadow: 0 0 1px rgba(0,0,0,.4);             
+}
+
+/*Label's arrow - default state */
+.faq-section label::before{
+    content: '';
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    margin-top: -6px;
+    border: 6px solid transparent;
+    border-left-color: inherit; 
+}
+
+/*Update the right arrow*/
+.faq-section input[type=checkbox]:checked~label::before{
+    border: 6px solid transparent;
+    border-top-color: inherit;
+    margin-top: -3px;
+    right: 10px;    
+}
+
+.faq-section input{
+    position: absolute; 
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0;         
+    display: none\9; /* IE8 and below */
+    margin: 0;          
+    width: 100%;
+    height: 36px;
+}
+
 h1, h2 {
 	font-family: 'Karla', sans-serif;
     text-align: center;
@@ -190,7 +302,9 @@ h5 {
     font-family: 'Karla', sans-serif;
     text-align: center;
     font-size: 20px;
-    padding: 0;
+    font-weight: 600;
+    padding-top: 20px;
+    white-space: normal;
     text-transform: uppercase;
 }
 
@@ -214,6 +328,7 @@ h7 {
     font-size: 24px;
 }
 
+
 p {
   font-family: 'Archivo';
     margin: auto;
@@ -222,7 +337,10 @@ p {
 
 ul {
     font-family: 'Archivo', sans-serif !important;
+    
 }
+
+ul li { padding: 5px 0px; }
 
 .carousel-item {
   height: 65vh;
@@ -242,11 +360,12 @@ ul {
 
 .card{
     border-radius: 2px;
-    height: 150px;
+    height: 95px;
     background: #fff;
     box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
       transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
   padding: 14px 80px 18px 36px;
+    margin-bottom: 30px;
   cursor: pointer;
 }
 
@@ -263,6 +382,7 @@ ul {
 
 .card h3{
   font-weight: 600;
+    text-align: cen
 }
 
 .card img{
@@ -276,18 +396,39 @@ ul {
   background-image: url('../img/hands.png');
       background-repeat: no-repeat;
     background-position: right;
-    background-size: 80px;
+    background-size: 60px;
 }
 
 .card-2{
    background-image: url('../img/treble-clef.png');
       background-repeat: no-repeat;
     background-position: right;
-    background-size: 80px;
+    background-size: 60px;
 }
 
 .card-3{
    background-image: url('../img/lion.png');
+      background-repeat: no-repeat;
+    background-position: right;
+    background-size: 60px;
+}
+
+.card-4{
+  background-image: url('../img/calendar.jpg');
+      background-repeat: no-repeat;
+    background-position: right;
+    background-size: 73px;
+}
+
+.card-5{
+   background-image: url("https://img.icons8.com/plasticine/2x/overtime.png");
+      background-repeat: no-repeat;
+    background-position: right;
+    background-size: 80px;
+}
+
+.card-6{
+   background-image: url("https://png.pngtree.com/element_our/png/20181206/simple-business-flat-vector-of-cash-money-icon-design-template-png_258004.jpg");
       background-repeat: no-repeat;
     background-position: right;
     background-size: 80px;
@@ -296,7 +437,8 @@ ul {
 
 @media(max-width: 990px){
   .card{
-    margin: 20px;
+    margin: 10px;
+    height: auto;
   }
 } 
 
@@ -318,15 +460,16 @@ ul {
     font-weight: 600;
     text-align: center;
 }
+
 .container p {
     font-family: 'Archivo', 'Montserrat', Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
     font-style: normal;
-    font-weight:;
+    padding: 10px;
 }
 
 @media screen and (max-width: 768px) {
   .container p {
-     padding: 20px 40px;
+     padding: 20px;
   }
 }
 
@@ -433,9 +576,6 @@ ul {
   }
 }
 
-
-
-
 .equal {
   display: flex;
   display: -webkit-flex;
@@ -511,7 +651,7 @@ ul {
 }
 
 .list {
-	line-height: 25px
+	line-height: 25px;
 }
 
 .team-section{
@@ -607,7 +747,7 @@ margin-left: 10px
   margin-bottom: 50px;
   width: calc(100%/3);
   height: ;
-    padding: 30px 5px 5px;
+    padding: 10px 5px 5px;
     vertical-align:top;
     float: left;
 }
@@ -619,8 +759,90 @@ margin-left: 10px
       align: middle;
       margin-top: 0px;
       margin-bottom: 0px;
+          padding: 2px 5px 5px;
   }
 }
+
+.ens1-margin {
+    margin-bottom: 10px;
+}
+.ens1-container {
+    padding: 0 4px;
+}
+
+.ens1v img {
+    overflow: hidden;
+    margin-top: 8px;
+  width: calc(100%/6) ;
+    padding:0px 4px;
+    vertical-align:top;
+    float: left;
+}
+
+.ens1 img {
+    overflow: hidden;
+    margin-top: 8px;
+  width: calc(100%/4) ;
+    padding:0px 4px;
+    vertical-align:top;
+    float: left;
+}
+
+@media screen and (max-width:800px) {
+  .ens1 img {
+      width: 50%;
+    display: block;
+      align: middle;
+  }
+    .ens1v img {
+    width: calc(100%/3);
+        height: auto;
+    display: block;
+      align: middle;    
+    }
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.row-ps {
+  display: -ms-flexbox; /* IE10 */
+  display: inline-flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column-ps {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column-ps img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column-ps {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
 
 #par {
     font-size: 15px;
