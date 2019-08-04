@@ -119,6 +119,7 @@ a:hover {
 
 @media screen and (max-width: 800px) {
   .cl-effect-1 a {
+      margin: auto;
     display:block;
       text-align: center;
   }
@@ -435,7 +436,7 @@ ul li { padding: 5px 0px; }
 }
 
 
-@media(max-width: 990px){
+@media(max-width: 800px){
   .card{
     margin: 10px;
     height: auto;
@@ -691,7 +692,7 @@ ul li { padding: 5px 0px; }
   margin: 0px 15px 15px 0px;
 }
 .p-name{
-overflow: visible;
+overflow: visible !important;
   margin-top: 3px;
   text-transform: uppercase;
   font-family: 'archivo';
@@ -727,6 +728,10 @@ margin-left: 10px
   .pe, .be img{
     width: 100%;
   }
+    .p-name a {
+        overflow: visible;
+        white-space: nowrap;
+    }
 }
 
 .navbar-toggler .navbar-toggler-right {
