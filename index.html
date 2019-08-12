@@ -42,6 +42,12 @@
     htmlElement.addEventListener('touchstart', touchStart);
 }());
     </script>
+    
+<script>
+    $(function() {
+    $('#the_image').attr('src','Untitled-1.gif');
+});
+    </script>
 
 </head>
 
@@ -122,7 +128,7 @@
     
     
     <!-- BACKGROUND IMAGE -->
-  <img src="Untitled-1.gif" width="100%" alt=""/>
+  <img id='the_image' style="width:100%" src="Untitled-1.gif">
 
     
     
@@ -227,7 +233,7 @@
       
       <div class="container">
           <div class="spon" style="text-align: center">
-          <h4>Proud Sponsors of the Lion Band!</h4>
+          <h4>Proud Sponsors of the Lion Band</h4>
                     <a href="http://www.whataburger.com/">
                     <img class="spon" src="img/s1.png" alt="Whataburger" class="center"></a>
               <a href="http://www.dallasmedcenter.com/">
